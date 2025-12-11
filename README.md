@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>M.S.M Login & Register</title>
+<title>Login & Register</title>
 
 <style>
     body {
@@ -100,7 +100,7 @@
 
     <!-- LOGIN FORM -->
     <div id="login">
-        <h2>M.S.M Login</h2>
+        <h2>Login</h2>
 
         <label>Username</label>
         <input type="text" id="username" placeholder="Enter Username">
@@ -117,7 +117,7 @@
 
     <!-- REGISTER FORM -->
     <div id="register">
-        <h2>M.S.M Register</h2>
+        <h2>Register</h2>
 
         <label>Create Username</label>
         <input type="text" placeholder="Create Username">
