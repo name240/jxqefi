@@ -1,315 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>M.S.M Firecore V2</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<title>M.S.M Login & Register</title>
 
-    html, body {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at top, #1a0000, #000000 80%);
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .logo-box {
-      position: relative;
-      width: 360px;
-      height: 200px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      backdrop-filter: blur(16px);
-      box-shadow:
-        0 0 30px rgba(255, 0, 0, 0.25),
-        0 0 70px rgba(255, 0, 0, 0.3),
-        inset 0 0 10px rgba(255, 255, 255, 0.06);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
-
-    .logo-box:hover {
-      box-shadow:
-        0 0 40px rgba(255, 0, 0, 0.4),
-        0 0 90px rgba(255, 50, 0, 0.5),
-        inset 0 0 12px rgba(255, 255, 255, 0.08);
-    }
-
-    .logo-text {
-      font-size: 44px;
-      font-weight: bold;
-      letter-spacing: 12px;
-      background: linear-gradient(to right, #ff4d4d, #ff0000, #ff4d00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow:
-        0 0 10px rgba(255, 0, 0, 0.7),
-        0 0 20px rgba(255, 50, 0, 0.6),
-        0 0 30px rgba(255, 80, 0, 0.5);
-      z-index: 2;
-      animation: glow 3.5s ease-in-out infinite;
-    }
-
-    .light-wave {
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 200%;
-      height: 100%;
-      background: linear-gradient(
-        120deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.07) 50%,
-        transparent 100%
-      );
-      transform: skewX(-20deg);
-      animation: waveMove 5s linear infinite;
-      z-index: 1;
-    }
-
-    .reflection-top {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.07), transparent);
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    @keyframes glow {
-      0%, 100% {
-        text-shadow:
-          0 0 10px rgba(255, 0, 0, 0.7),
-          0 0 20px rgba(255, 50, 0, 0.6),
-          0 0 30px rgba(255, 80, 0, 0.5);
-      }
-      50% {
-        text-shadow:
-          0 0 15px rgba(255, 50, 0, 0.9),
-          0 0 25px rgba(255, 100, 0, 0.7),
-          0 0 40px rgba(255, 120, 0, 0.6);
-      }
-    }
-
-    @keyframes waveMove {
-      0% {
-        left: -100%;
-      }
-      100% {
-        left: 100%;
-      }
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 400px) {
-      .logo-box {
-        width: 90%;
-        height: 180px;
-      }
-
-      .logo-text {
-        font-size: 34px;
-        letter-spacing: 8px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<center>  <div class="logo-box" onclick="restartWave()">
-    <div class="light-wave"></div>
-    <div class="reflection-top"></div>
-    <div class="logo-text">M.S.M</div>
-  </div></center>
-
-  <script>
-    function restartWave() {
-      const wave = document.querySelector('.light-wave');
-      wave.style.animation = 'none';
-      void wave.offsetWidth;
-      wave.style.animation = 'waveMove 5s linear infinite';
-    }
-  </script>
-
-</body>
-</html>
-
-
-
-<html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,text-align:device,initial-scale=device"/>
-	<style>
-
-h1{font-size:5vw;}
-p{font-size:3vw;}
-	</style>
-  <title>The Radiance School System</title>
-  <style>
-    /* Basic Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
+<style>
     body {
-      background: linear-gradient(to right, #fefcea, #f1da36);
-      min-height: 100vh;
-      color: #333;
-	
-	  
-    }
-
-    header {
-      background: #002c6b;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-
-    nav {
-	width:100%
-	min-height:100vh;
-      display: flex;
-      justify-content: center;
-	  flex-direction:column;
-      background: #0056b3;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+        margin: 0;
+        padding: 0;
+        background: black;
+        font-family: Arial, sans-serif;
+        color: white;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .container {
-      text-align: center;
-      padding: 40px 20px;
+        width: 380px;
+        background: #111;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px red;
     }
 
-    .container img {
-      width: 300px;
-      max-width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    h2 {
+        text-align: center;
+        color: red;
+        margin-bottom: 20px;
     }
 
-    .school-name {
-      margin-top: 20px;
-      font-size: 32px;
-      font-weight: bold;
-      color: #002c6b;
-      text-shadow: 1px 1px 2px #999;
+    label { font-size: 14px; }
+    
+    input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0 20px;
+        background: #000;
+        border: 2px solid red;
+        border-radius: 5px;
+        color: white;
+        font-size: 15px;
     }
 
-    .tagline {
-      font-size: 18px;
-      color: #666;
-      margin-top: 10px;
+    .btn {
+        width: 100%;
+        padding: 12px;
+        background: red;
+        border: none;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .btn:hover { background: #ff4d4d; }
+
+    .switch {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .switch a {
+        color: red;
+        cursor: pointer;
+        text-decoration: none;
     }
 
-    section {
-      padding: 60px 20px;
+    #register { display: none; }
+</style>
+
+<script>
+    function showLogin() {
+        document.getElementById("login").style.display = "block";
+        document.getElementById("register").style.display = "none";
     }
 
-    section h2 {
-      color: #002c6b;
-      margin-bottom: 20px;
+    function showRegister() {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("register").style.display = "block";
     }
-section h1 {
-      color: #002c6b;
-      margin-bottom: 20px;
+
+    function loginNow() {
+        let user = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+
+        if (user === "M.Saim" && pass === "MAJOKA") {
+            window.location.href = "https://name240.github.io/M.SaimMajoka.../";
+        } else {
+            alert("? Wrong Username or Password!");
+        }
     }
-    footer {
-      background: #002c6b;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
+</script>
+
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to The Radiance School System</h1>
-  </header>
+<div class="container">
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- LOGIN FORM -->
+    <div id="login">
+        <h2>M.S.M Login</h2>
 
-  <div id="home" class="container">
-    <img src="C:\Users\HP\Desktop\New folder\School Logo.jpg;" alt="School Logo" />
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter Username">
 
-    <div class="school-name">THE RADIANCE SCHOOL SYSTEM</div>
-    <div class="tagline">Glow the minds with knowledge</div>
-  </div>
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter Password">
 
-  <section id="about">
-	<h2>About </h2>
-    <p>
-      The Radiance School System is dedicated to empowering students through knowledge
-      creativity, and moral values. We provide a nurturing environment that encourages
-      learning and personal growth for every student.
-    </p>
-  </section>
+        <button class="btn" onclick="loginNow()">Login</button>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@theradianceschool.edu.pk</p>
-    <p>Phone: +92-300-0000000</p>
-  </section>
-  <section id="created By:">
-  <h1>Created By:</h1>
-  <p>M.Saim Majoka</p>
-  </section>
-  <footer>
-    &copy; 2025 The Radiance School System.
-  </footer>
+        <div class="switch">
+            Don’t have an account? <a onclick="showRegister()">Register</a>
+        </div>
+    </div>
 
-  <script>
-    // Smooth scroll for nav links
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
+    <!-- REGISTER FORM -->
+    <div id="register">
+        <h2>M.S.M Register</h2>
+
+        <label>Create Username</label>
+        <input type="text" placeholder="Create Username">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email">
+
+        <label>Create Password</label>
+        <input type="password" placeholder="Create Password">
+
+        <button class="btn">Register</button>
+
+        <div class="switch">
+            Already have an account? <a onclick="showLogin()">Login</a>
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
